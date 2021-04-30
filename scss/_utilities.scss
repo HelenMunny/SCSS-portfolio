@@ -1,6 +1,23 @@
-button {
-  background: $clr-blue-4;
-  border: 3px solid $text-color;
-  padding: 10px;
-  border-radius: 5px;
+// functions
+@function font-size($size) {
+  @return map-get($font-size, $size);
 }
+
+@function font-weight($weight) {
+  @return map-get($font-weight, $weight);
+}
+
+// mixins
+@mixin transition {
+  transition: all 1s ease-out;
+}
+
+// @mixin background {
+//   @if $show-home-image {
+//     &#bg-img {
+//       background: $home-image;
+//       background-attachment: fixed;
+//       background-size: cover;
+//     }
+//   }
+// }
