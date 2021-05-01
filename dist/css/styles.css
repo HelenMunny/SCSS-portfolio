@@ -6,7 +6,12 @@
 }
 
 body {
-  background: #201a23;
+  background: -webkit-gradient(linear, left top, left bottom, from(#201a23e2), to(#201a23de)), url("/images/code.png");
+  background: linear-gradient(#201a23e2, #201a23de), url("/images/code.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
   color: #faeaea;
   line-height: 1.5;
   height: 100%;

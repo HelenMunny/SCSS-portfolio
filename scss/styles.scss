@@ -8,8 +8,8 @@
 }
 
 body {
-  // @include background;
-  background: $primary-clr;
+  @include background($show-home-image: true);
+  @include background-no-img($theme2: false);
   color: $text-color;
   line-height: 1.5;
   height: 100%;

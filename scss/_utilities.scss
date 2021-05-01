@@ -12,12 +12,18 @@
   transition: all 1s ease-out;
 }
 
-// @mixin background {
-//   @if $show-home-image {
-//     &#bg-img {
-//       background: $home-image;
-//       background-attachment: fixed;
-//       background-size: cover;
-//     }
-//   }
-// }
+@mixin background($show-home-image: true) {
+  @if $show-home-image {
+    background: linear-gradient(#201a23e2, #201a23de), $bg-img;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+  }
+}
+
+@mixin background-no-img($theme2: true) {
+  @if $theme2 {
+    background: $primary-clr;
+  }
+}
