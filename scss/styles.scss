@@ -19,6 +19,10 @@ a {
   color: $text-color;
   text-decoration: none;
   list-style-type: none;
+
+  &:hover {
+    color: $secondary-clr;
+  }
 }
 h1,
 h2,
@@ -100,6 +104,79 @@ main {
       &:nth-child(3) {
         transform: rotate(-45deg) translate(8px, -8px);
       }
+    }
+  }
+}
+
+// nav overlay
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.95;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-image,
+  &-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-links {
+    @include transition;
+    background: $primary-clr;
+    list-style-type: none;
+    transform: translate3d(0, -100%, 0);
+
+    &.show {
+      // slide from bottom
+      transform: translate3d(0, 0, 0);
+    }
+
+    .nav-item {
+      padding-top: 0.8rem;
+      font-size: font-size(link-font);
+
+      &:hover {
+        @include transition;
+        color: $secondary-clr;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &-image {
+    @include transition;
+    background: darken($primary-clr, 5%);
+    transform: translate3d(0, 100%, 0);
+
+    &.show {
+      // slide from top
+      transform: translate3d(0, 0, 0);
+    }
+
+    .self-image {
+      background: url("/images/myPic.png");
+      background-size: 250px 250px;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: solid 3px $secondary-clr;
     }
   }
 }
