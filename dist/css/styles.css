@@ -200,7 +200,7 @@ main .fa:hover {
 }
 
 .nav-image .self-image {
-  background: url("./images/myPic.png");
+  background: url("images/myPic.png");
   background-size: 250px 250px;
   background-repeat: no-repeat;
   width: 250px;
