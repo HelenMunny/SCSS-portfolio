@@ -6,8 +6,8 @@
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#201a23e2), to(#201a23de)), url(/images/code.png);
-  background: linear-gradient(#201a23e2, #201a23de), url(/images/code.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(#201a23e2), to(#201a23de)), url("./images/myPic.png");
+  background: linear-gradient(#201a23e2, #201a23de), url("./images/myPic.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -200,7 +200,7 @@ main .fa:hover {
 }
 
 .nav-image .self-image {
-  background: url(/images/myPic.png);
+  background: url("./images/myPic.png");
   background-size: 250px 250px;
   background-repeat: no-repeat;
   width: 250px;
