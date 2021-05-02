@@ -21,9 +21,3 @@
     opacity: 0.8;
   }
 }
-
-@mixin background-no-img($theme2: true) {
-  @if $theme2 {
-    background: $primary-clr;
-  }
-}

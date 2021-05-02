@@ -9,7 +9,6 @@
 
 body {
   @include background($show-home-image: true);
-  @include background-no-img($theme2: false);
   color: $text-color;
   line-height: 1.5;
   height: 100%;
@@ -65,6 +64,42 @@ main {
     &:hover {
       @include transition;
       color: $secondary-clr;
+    }
+  }
+}
+
+// nav section............
+.nav-btn {
+  @include transition;
+  position: absolute;
+  z-index: 4;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+
+  .btn-line {
+    width: 30px;
+    height: 3px;
+    margin-bottom: 6px;
+    background: $secondary-clr;
+  }
+
+  // nav button rotate into X
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
     }
   }
 }

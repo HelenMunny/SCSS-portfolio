@@ -81,4 +81,40 @@ main .fa:hover {
   transition: all 1s ease-out;
   color: #50ffb1;
 }
+
+.nav-btn {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  position: absolute;
+  z-index: 4;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+}
+
+.nav-btn .btn-line {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 6px;
+  background: #50ffb1;
+}
+
+.nav-btn.close {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.nav-btn.close .btn-line:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+          transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-btn.close .btn-line:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(7px, -7px);
+          transform: rotate(-45deg) translate(7px, -7px);
+}
 /*# sourceMappingURL=styles.css.map */
