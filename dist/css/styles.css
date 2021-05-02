@@ -114,7 +114,7 @@ main .fa:hover {
 }
 
 .nav-btn.close .btn-line:nth-child(3) {
-  -webkit-transform: rotate(-45deg) translate(7px, -7px);
-          transform: rotate(-45deg) translate(7px, -7px);
+  -webkit-transform: rotate(-45deg) translate(8px, -8px);
+          transform: rotate(-45deg) translate(8px, -8px);
 }
 /*# sourceMappingURL=styles.css.map */
