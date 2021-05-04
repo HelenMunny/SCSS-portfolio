@@ -47,6 +47,7 @@ h3 {
     color: $secondary-clr;
     font-weight: bold;
     text-transform: uppercase;
+    padding-bottom: 1rem;
   }
 }
 
@@ -68,5 +69,51 @@ main {
 
   .exp-position {
     font-style: italic;
+    padding-bottom: 20px;
+  }
+  .heading {
+    padding-bottom: 4rem;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 'my-image bio bio' 'exp-1 exp-2 exp-3';
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-gap: 20px;
+
+  .my-pic {
+    height: 200px;
+    border: solid 3px $secondary-clr;
+    border-radius: 50%;
+  }
+
+  .my-image {
+    grid-area: my-image;
+    margin: auto;
+  }
+
+  .bio {
+    grid-area: bio;
+    align-self: center;
+  }
+
+  .exp-1 {
+    grid-area: exp-1;
+  }
+
+  .exp-2 {
+    grid-area: exp-2;
+  }
+
+  .exp-1 {
+    grid-area: exp-3;
+  }
+
+  .experience {
+    background: lighten($primary-clr, 10%);
+    padding: 15px;
+    border-radius: 10px;
+    border-bottom: 4px solid $secondary-clr;
   }
 }

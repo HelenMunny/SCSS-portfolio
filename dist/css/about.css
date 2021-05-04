@@ -246,6 +246,7 @@ h3.bio-heading {
   color: #50ffb1;
   font-weight: bold;
   text-transform: uppercase;
+  padding-bottom: 1rem;
 }
 
 header {
@@ -268,5 +269,67 @@ main .exp-heading {
 
 main .exp-position {
   font-style: italic;
+  padding-bottom: 20px;
+}
+
+main .heading {
+  padding-bottom: 4rem;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'my-image bio bio' 'exp-1 exp-2 exp-3';
+  -ms-grid-columns: 1fr, 1fr, 1fr;
+      grid-template-columns: 1fr, 1fr, 1fr;
+  grid-gap: 20px;
+}
+
+.container .my-pic {
+  height: 200px;
+  border: solid 3px #50ffb1;
+  border-radius: 50%;
+}
+
+.container .my-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: my-image;
+  margin: auto;
+}
+
+.container .bio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: bio;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .exp-1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: exp-1;
+}
+
+.container .exp-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: exp-2;
+}
+
+.container .exp-1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: exp-3;
+}
+
+.container .experience {
+  background: #3b3040;
+  padding: 15px;
+  border-radius: 10px;
+  border-bottom: 4px solid #50ffb1;
 }
 /*# sourceMappingURL=about.css.map */
