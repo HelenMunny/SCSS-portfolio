@@ -57,6 +57,22 @@
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
+  .container {
+        grid-template-areas: 'my-image' 'bio' 'exp-1' 'exp-2' 'exp-3';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .container .my-pic {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media (min-width: 1171px) {
+  .my-pic {
+    height: 250px;
+    width: 220px;
+  }
 }
 
 .nav-btn {

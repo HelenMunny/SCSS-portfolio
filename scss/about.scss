@@ -1,7 +1,6 @@
 @import 'utilities';
 @import 'variables';
 @import 'nav';
-@import 'mediaQueries';
 
 * {
   margin: 0;
@@ -58,8 +57,9 @@ header {
 }
 main {
   width: 90vw;
+  min-height: calc(100vh-60px);
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 2rem 0;
   overflow: hidden;
 
   .exp-heading {
@@ -81,6 +81,7 @@ main {
   grid-template-areas: 'my-image bio bio' 'exp-1 exp-2 exp-3';
   grid-template-columns: 1fr, 1fr, 1fr;
   grid-gap: 20px;
+  margin-bottom: 2rem;
 
   .my-pic {
     height: 200px;
@@ -96,6 +97,7 @@ main {
   .bio {
     grid-area: bio;
     align-self: center;
+    padding: 2rem 0;
   }
 
   .exp-1 {
@@ -112,8 +114,18 @@ main {
 
   .experience {
     background: lighten($primary-clr, 10%);
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     border-bottom: 4px solid $secondary-clr;
+    padding-bottom: 1rem;
   }
 }
+
+footer {
+  background: lighten($primary-clr, 10%);
+  width: 100vw;
+  text-align: center;
+  height: 60px;
+}
+
+@import 'mediaQueries';
