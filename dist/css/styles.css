@@ -1,3 +1,64 @@
+@media (max-width: 500px) {
+  main#home h1 {
+    margin-top: 15vh;
+  }
+  main#home .lg-heading {
+    font-size: 3.5rem;
+  }
+  main#home .lg-heading .nickname {
+    font-size: 4rem;
+  }
+  .nav-item {
+    padding-top: 0.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+  }
+  main .sm-heading {
+    margin-bottom: 1rem !important;
+  }
+  div.nav-image,
+  ul.nav-links {
+    float: none;
+    width: 100%;
+  }
+  div.nav-image {
+    height: 35vh;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  div.nav-image.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  div.nav-image .self-image {
+    background-size: 200px 200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 3px #50ffb1;
+  }
+  ul.nav-links {
+    height: 65vh;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  ul.nav-links.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +67,8 @@
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#201a23e2), to(#201a23de)), url("./images/myPic.png");
-  background: linear-gradient(#201a23e2, #201a23de), url("./images/myPic.png");
+  background: -webkit-gradient(linear, left top, left bottom, from(#201a23e2), to(#201a23de)), url("/images/code.png");
+  background: linear-gradient(#201a23e2, #201a23de), url("/images/code.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -175,7 +236,17 @@ main .fa:hover {
 
 .nav-links .nav-item {
   padding-top: 0.8rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+.nav-links .nav-item.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .nav-links .nav-item:hover {
@@ -200,7 +271,7 @@ main .fa:hover {
 }
 
 .nav-image .self-image {
-  background: url("./images/myPic.png");
+  background: url("/images/myPic.png");
   background-size: 250px 250px;
   background-repeat: no-repeat;
   width: 250px;

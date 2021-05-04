@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'utilities';
+@import 'mediaQueries';
 
 * {
   margin: 0;
@@ -150,6 +151,14 @@ main {
     .nav-item {
       padding-top: 0.8rem;
       font-size: font-size(link-font);
+      text-transform: uppercase;
+      @include transition;
+      transform: translate3d(100%, 0, 0);
+
+      &.show {
+        // slide from right
+        transform: translate3d(0, 0, 0);
+      }
 
       &:hover {
         @include transition;
@@ -170,7 +179,7 @@ main {
     }
 
     .self-image {
-      background: url('./images/myPic.png');
+      background: url('/images/myPic.png');
       background-size: 250px 250px;
       background-repeat: no-repeat;
       width: 250px;

@@ -1,0 +1,94 @@
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width: $pc) {
+    @content;
+  }
+}
+
+@mixin pcXL {
+  @media (min-width: $pcXL) {
+    @content;
+  }
+}
+
+// adding those mixins
+@include mobile {
+  main#home {
+    h1 {
+      margin-top: 15vh;
+    }
+
+    .lg-heading {
+      font-size: font-size(semi-big);
+
+      .nickname {
+        font-size: font-size(bigger);
+      }
+    }
+  }
+
+  .nav-item {
+    padding-top: 0.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+@include tablet {
+  main {
+    text-align: center;
+    align-items: center;
+
+    .lg-heading {
+      line-height: 1;
+    }
+
+    .sm-heading {
+      margin-bottom: 1rem !important;
+    }
+  }
+
+  div.nav-image,
+  ul.nav-links {
+    float: none;
+    width: 100%;
+  }
+
+  div.nav-image {
+    height: 35vh;
+    transform: translate3d(100%, 0, 0);
+
+    &.show {
+      // slide from right
+      transform: translate3d(0, 0, 0);
+    }
+
+    .self-image {
+      background-size: 200px 200px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: solid 3px $secondary-clr;
+    }
+  }
+
+  ul.nav-links {
+    height: 65vh;
+    transform: translate3d(-100%, 0, 0);
+
+    &.show {
+      // slide from left
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
