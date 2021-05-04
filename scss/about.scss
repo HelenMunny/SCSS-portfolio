@@ -1,0 +1,72 @@
+@import 'utilities';
+@import 'variables';
+@import 'nav';
+@import 'mediaQueries';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include background($show-home-image: false);
+  color: $text-color;
+  line-height: 1.5;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  list-style-type: none;
+
+  &:hover {
+    color: $secondary-clr;
+  }
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: font-weight(regular);
+
+  &.lg-heading {
+    font-size: font-size(semi-big);
+  }
+
+  .me {
+    color: $secondary-clr;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: font-size(bigger);
+    font-weight: font-weight(large);
+  }
+
+  &.bio-heading {
+    color: $secondary-clr;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+main {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 4rem 0;
+  overflow: hidden;
+
+  .exp-heading {
+    color: $secondary-clr;
+    font-size: font-size(link-font-sm);
+  }
+
+  .exp-position {
+    font-style: italic;
+  }
+}

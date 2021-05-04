@@ -1,64 +1,3 @@
-@media (max-width: 500px) {
-  main#home h1 {
-    margin-top: 15vh;
-  }
-  main#home .lg-heading {
-    font-size: 3.5rem;
-  }
-  main#home .lg-heading .nickname {
-    font-size: 4rem;
-  }
-  .nav-item {
-    padding-top: 0.5rem !important;
-    font-size: 1rem !important;
-  }
-}
-
-@media (max-width: 768px) {
-  main {
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  main .lg-heading {
-    line-height: 1;
-  }
-  main .sm-heading {
-    margin-bottom: 1rem !important;
-  }
-  div.nav-image,
-  ul.nav-links {
-    float: none;
-    width: 100%;
-  }
-  div.nav-image {
-    height: 35vh;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-  div.nav-image.show {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  div.nav-image .self-image {
-    background-size: 200px 200px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: solid 3px #50ffb1;
-  }
-  ul.nav-links {
-    height: 65vh;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-  }
-  ul.nav-links.show {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-
 .nav-btn {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
@@ -192,6 +131,67 @@
   border: solid 3px #50ffb1;
 }
 
+@media (max-width: 500px) {
+  main#home h1 {
+    margin-top: 15vh;
+  }
+  main#home .lg-heading {
+    font-size: 3.5rem;
+  }
+  main#home .lg-heading .nickname {
+    font-size: 4rem;
+  }
+  .nav-item {
+    padding-top: 0.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+  }
+  main .sm-heading {
+    margin-bottom: 1rem !important;
+  }
+  div.nav-image,
+  ul.nav-links {
+    float: none;
+    width: 100%;
+  }
+  div.nav-image {
+    height: 35vh;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  div.nav-image.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  div.nav-image .self-image {
+    background-size: 200px 200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 3px #50ffb1;
+  }
+  ul.nav-links {
+    height: 65vh;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  ul.nav-links.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -200,11 +200,7 @@
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#201a23e2), to(#201a23de)), url("/images/code.png");
-  background: linear-gradient(#201a23e2, #201a23de), url("/images/code.png");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background: #201a23;
   opacity: 0.8;
   color: #faeaea;
   line-height: 1.5;
@@ -232,25 +228,24 @@ h3 {
 h1.lg-heading,
 h2.lg-heading,
 h3.lg-heading {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
-h1 .nickname,
-h2 .nickname,
-h3 .nickname {
+h1 .me,
+h2 .me,
+h3 .me {
   color: #50ffb1;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 700;
 }
 
-h1.sm-heading,
-h2.sm-heading,
-h3.sm-heading {
-  margin-bottom: 2rem;
-  padding: 0.3rem 0.5rem;
-  background: #251e29;
-  border-radius: 2px;
+h1.bio-heading,
+h2.bio-heading,
+h3.bio-heading {
+  color: #50ffb1;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 header {
@@ -266,17 +261,12 @@ main {
   overflow: hidden;
 }
 
-main h1 {
-  margin-top: 20vh;
-}
-
-main .fa {
-  padding-right: 15px;
-}
-
-main .fa:hover {
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+main .exp-heading {
   color: #50ffb1;
+  font-size: 1rem;
 }
-/*# sourceMappingURL=styles.css.map */
+
+main .exp-position {
+  font-style: italic;
+}
+/*# sourceMappingURL=about.css.map */

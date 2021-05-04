@@ -19,5 +19,8 @@
     background-size: cover;
     background-position: center;
     opacity: 0.8;
+  } @else {
+    background: $primary-clr;
+    opacity: 0.8;
   }
 }
