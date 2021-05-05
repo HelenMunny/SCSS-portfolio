@@ -131,6 +131,10 @@
   border: solid 3px #50ffb1;
 }
 
+.current {
+  color: #50ffb1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -196,7 +200,7 @@ header {
 
 main {
   width: 90vw;
-  min-height: calc(100vh-60px);
+  min-height: calc(100vh - 60px);
   margin: 0 auto;
   padding: 2rem 0;
   overflow: hidden;
@@ -223,7 +227,7 @@ main .heading {
   -ms-grid-columns: 1fr, 1fr, 1fr;
       grid-template-columns: 1fr, 1fr, 1fr;
   grid-gap: 20px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .container .my-pic {
@@ -281,6 +285,27 @@ footer {
   width: 100vw;
   text-align: center;
   height: 60px;
+}
+
+.current {
+  color: #50ffb1;
+}
+
+.work-image {
+  height: 200px;
+}
+
+.preview {
+  font-style: italic;
+  background: #56455e;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.Github {
+  font-style: italic;
+  background: #151117;
+  padding: 3px;
 }
 
 @media (max-width: 500px) {

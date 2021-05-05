@@ -1,6 +1,5 @@
 @import 'variables';
 @import 'utilities';
-@import 'mediaQueries';
 @import 'nav';
 
 * {
@@ -73,3 +72,5 @@ main {
     }
   }
 }
+
+@import 'mediaQueries';

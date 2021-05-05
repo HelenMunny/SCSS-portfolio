@@ -57,7 +57,7 @@ header {
 }
 main {
   width: 90vw;
-  min-height: calc(100vh-60px);
+  min-height: calc(100vh - 60px);
   margin: 0 auto;
   padding: 2rem 0;
   overflow: hidden;
@@ -81,7 +81,7 @@ main {
   grid-template-areas: 'my-image bio bio' 'exp-1 exp-2 exp-3';
   grid-template-columns: 1fr, 1fr, 1fr;
   grid-gap: 20px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   .my-pic {
     height: 200px;
@@ -126,6 +126,27 @@ footer {
   width: 100vw;
   text-align: center;
   height: 60px;
+}
+
+.current {
+  color: $secondary-clr;
+}
+
+// projects section
+
+.work-image {
+  height: 200px;
+}
+.preview {
+  font-style: italic;
+  background: lighten($primary-clr, 20%);
+  padding: 3px;
+  margin-bottom: 5px;
+}
+.Github {
+  font-style: italic;
+  background: darken($primary-clr, 4%);
+  padding: 3px;
 }
 
 @import 'mediaQueries';
