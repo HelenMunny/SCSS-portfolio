@@ -175,8 +175,11 @@ h3.lg-heading {
 }
 
 h1 .me,
+h1 .chat,
 h2 .me,
-h3 .me {
+h2 .chat,
+h3 .me,
+h3 .chat {
   color: #50ffb1;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 4rem;
@@ -291,21 +294,33 @@ footer {
   color: #50ffb1;
 }
 
-.work-image {
-  height: 200px;
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4rem 0;
 }
 
-.preview {
-  font-style: italic;
-  background: #56455e;
-  padding: 3px;
-  margin-bottom: 5px;
+.box {
+  border: 5px solid #faeaea;
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
 }
 
-.Github {
+.box:hover {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  background-color: #50ffb1;
+  color: black;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.box .contact-medium {
+  color: #50ffb1;
   font-style: italic;
-  background: #151117;
-  padding: 3px;
+  font-weight: bold;
 }
 
 @media (max-width: 500px) {

@@ -35,7 +35,8 @@ h3 {
     font-size: font-size(semi-big);
   }
 
-  .me {
+  .me,
+  .chat {
     color: $secondary-clr;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: font-size(bigger);
@@ -132,21 +133,30 @@ footer {
   color: $secondary-clr;
 }
 
-// projects section
+// contact section......................
 
-.work-image {
-  height: 200px;
+.contact-container {
+  display: flex;
+  padding: 4rem 0;
 }
-.preview {
-  font-style: italic;
-  background: lighten($primary-clr, 20%);
-  padding: 3px;
-  margin-bottom: 5px;
-}
-.Github {
-  font-style: italic;
-  background: darken($primary-clr, 4%);
-  padding: 3px;
+.box {
+  border: 5px solid $text-color;
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
+
+  &:hover {
+    @include transition;
+    background-color: $secondary-clr;
+    color: black;
+    transform: scale(0.9);
+  }
+
+  .contact-medium {
+    color: $secondary-clr;
+    font-style: italic;
+    font-weight: bold;
+  }
 }
 
 @import 'mediaQueries';
