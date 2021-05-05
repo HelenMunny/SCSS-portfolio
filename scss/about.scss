@@ -136,26 +136,37 @@ footer {
 // contact section......................
 
 .contact-container {
+  min-height: 45vh;
   display: flex;
-  padding: 4rem 0;
-}
-.box {
-  border: 5px solid $text-color;
-  padding: 10px;
-  text-align: center;
-  margin: 5px;
+  padding: 5rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-  &:hover {
+  .box {
+    border: 4px solid $text-color;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 3rem;
     @include transition;
-    background-color: $secondary-clr;
-    color: black;
-    transform: scale(0.9);
-  }
 
-  .contact-medium {
-    color: $secondary-clr;
-    font-style: italic;
-    font-weight: bold;
+    &:hover {
+      @include transition;
+      background-color: $secondary-clr;
+      color: black;
+      transform: scale(0.9);
+
+      .contact-medium {
+        color: black;
+      }
+    }
+
+    .contact-medium {
+      color: $secondary-clr;
+      font-style: italic;
+      font-weight: bold;
+    }
   }
 }
 

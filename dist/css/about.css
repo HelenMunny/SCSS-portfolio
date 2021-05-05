@@ -295,20 +295,32 @@ footer {
 }
 
 .contact-container {
+  min-height: 45vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 4rem 0;
+  padding: 5rem 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.box {
-  border: 5px solid #faeaea;
+.contact-container .box {
+  border: 4px solid #faeaea;
   padding: 10px;
   text-align: center;
-  margin: 5px;
+  margin: 20px;
+  margin-bottom: 3rem;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 
-.box:hover {
+.contact-container .box:hover {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
   background-color: #50ffb1;
@@ -317,7 +329,11 @@ footer {
           transform: scale(0.9);
 }
 
-.box .contact-medium {
+.contact-container .box:hover .contact-medium {
+  color: black;
+}
+
+.contact-container .box .contact-medium {
   color: #50ffb1;
   font-style: italic;
   font-weight: bold;
