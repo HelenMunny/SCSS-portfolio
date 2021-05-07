@@ -173,14 +173,15 @@ footer {
 // projects section
 
 .center {
-  width: 275px;
+  width: 175px;
   height: 36px;
+  border: 0.2px solid $secondary-clr;
   background: #50ffb1;
   position: absolute;
-  // top: 30%;
-  // left: 50%;
+  top: 20%;
+  left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
-  animation: animate-pen 4s linear infinite;
+  animation: animate-pen 5s linear infinite;
 }
 
 .center:before {
@@ -188,10 +189,10 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   background: $primary-clr;
-  animation: animate 4s linear infinite;
+  animation: animate 5s linear infinite;
 }
 .center:after {
   content: '';
@@ -232,26 +233,38 @@ footer {
 }
 
 // pencil stroke
+// #work {
+//   background: red;
+// }
+.cover {
+  height: 25vh;
+}
 
 .stroke {
-  width: 350px;
+  width: 200px;
   height: 3px;
   background: $secondary-clr;
   position: absolute;
-  top: 55%;
-  left: 50%;
+  top: 35%;
+  left: 45%;
   transform: translate(-50%, -50%);
-  border: 0;
+
+  .text-under-stroke {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: font-size(link-font);
+  }
 }
 .stroke:before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  // width: 100%;
+  // height: 100%;
   background: $primary-clr;
-  animation: animate 4s linear infinite;
+  animation: animate 5s linear infinite;
 }
 .stroke:after {
   content: '';
@@ -261,7 +274,7 @@ footer {
   width: 100%;
   height: 100%;
   background: $primary-clr;
-  animation: animate 4s linear infinite;
+  animation: animate 5s linear infinite;
 }
 
 @keyframes animate {
@@ -281,19 +294,19 @@ footer {
 
 @keyframes animate-pen {
   0% {
-    left: 35%;
+    left: 38%;
     transform: rotate(-45deg);
   }
   50% {
-    left: 55%;
+    left: 50%;
     transform: rotate(-45deg);
   }
   75% {
-    left: 50%;
+    left: 48%;
     transform: rotate(135deg);
   }
   100% {
-    left: 35%;
+    left: 38%;
     transform: rotate(135deg);
   }
 }

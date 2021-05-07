@@ -340,14 +340,17 @@ footer {
 }
 
 .center {
-  width: 275px;
+  width: 175px;
   height: 36px;
+  border: 0.2px solid #50ffb1;
   background: #50ffb1;
   position: absolute;
+  top: 20%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
-  -webkit-animation: animate-pen 4s linear infinite;
-          animation: animate-pen 4s linear infinite;
+  -webkit-animation: animate-pen 5s linear infinite;
+          animation: animate-pen 5s linear infinite;
 }
 
 .center:before {
@@ -355,11 +358,9 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background: #201a23;
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
 }
 
 .center:after {
@@ -400,16 +401,25 @@ footer {
   border-radius: 0 4px 4px 0;
 }
 
+.cover {
+  height: 25vh;
+}
+
 .stroke {
-  width: 350px;
+  width: 200px;
   height: 3px;
   background: #50ffb1;
   position: absolute;
-  top: 55%;
-  left: 50%;
+  top: 35%;
+  left: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border: 0;
+}
+
+.stroke .text-under-stroke {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 1.1rem;
 }
 
 .stroke:before {
@@ -417,11 +427,10 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
   background: #201a23;
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
 }
 
 .stroke:after {
@@ -432,8 +441,8 @@ footer {
   width: 100%;
   height: 100%;
   background: #201a23;
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
 }
 
 @-webkit-keyframes animate {
@@ -468,22 +477,22 @@ footer {
 
 @-webkit-keyframes animate-pen {
   0% {
-    left: 35%;
+    left: 38%;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
   50% {
-    left: 55%;
+    left: 50%;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
   75% {
-    left: 50%;
+    left: 48%;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
   100% {
-    left: 35%;
+    left: 38%;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
@@ -491,22 +500,22 @@ footer {
 
 @keyframes animate-pen {
   0% {
-    left: 35%;
+    left: 38%;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
   50% {
-    left: 55%;
+    left: 50%;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
   75% {
-    left: 50%;
+    left: 48%;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
   100% {
-    left: 35%;
+    left: 38%;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
