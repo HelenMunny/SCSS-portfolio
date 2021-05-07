@@ -170,4 +170,132 @@ footer {
   }
 }
 
+// projects section
+
+.center {
+  width: 275px;
+  height: 36px;
+  background: #50ffb1;
+  position: absolute;
+  // top: 30%;
+  // left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  animation: animate-pen 4s linear infinite;
+}
+
+.center:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $primary-clr;
+  animation: animate 4s linear infinite;
+}
+.center:after {
+  content: '';
+  position: absolute;
+  background: $primary-clr;
+  // animation: animate 4s linear infinite;
+}
+
+.pencil:before {
+  content: '';
+  position: absolute;
+  left: -80px;
+  top: -2px;
+  border-style: solid;
+  border-color: transparent lighten($primary-clr, 20%) transparent transparent;
+  border-width: 23px 41px 16px;
+}
+
+.pencil:after {
+  content: '';
+  position: absolute;
+  left: -80px;
+  top: 0;
+  border-style: solid;
+  border-color: transparent $secondary-clr transparent transparent;
+  border-width: 23px 41px 16px;
+  transform: scale(0.4);
+}
+
+.pencil-top {
+  position: absolute;
+  right: -5px;
+  top: -1px;
+  height: 38px;
+  width: 20px;
+  background-color: lighten($primary-clr, 20%);
+  border-radius: 0 4px 4px 0;
+}
+
+// pencil stroke
+
+.stroke {
+  width: 350px;
+  height: 3px;
+  background: $secondary-clr;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0;
+}
+.stroke:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $primary-clr;
+  animation: animate 4s linear infinite;
+}
+.stroke:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $primary-clr;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+  75% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes animate-pen {
+  0% {
+    left: 35%;
+    transform: rotate(-45deg);
+  }
+  50% {
+    left: 55%;
+    transform: rotate(-45deg);
+  }
+  75% {
+    left: 50%;
+    transform: rotate(135deg);
+  }
+  100% {
+    left: 35%;
+    transform: rotate(135deg);
+  }
+}
+
 @import 'mediaQueries';
