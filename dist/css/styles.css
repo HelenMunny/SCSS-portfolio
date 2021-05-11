@@ -240,9 +240,37 @@ main .fa:hover {
     padding-top: 0.5rem !important;
     font-size: 1rem !important;
   }
+  main#work .center {
+    width: 120px;
+    top: 45% !important;
+    left: 50%;
+    -webkit-animation: animate-pen-sm 5s linear infinite;
+            animation: animate-pen-sm 5s linear infinite;
+  }
+  .center:before {
+    width: 0;
+    height: 0;
+    background: #50ffb1 !important;
+    -webkit-animation: Noanimation 0s !important;
+            animation: Noanimation 0s !important;
+  }
+  .stroke {
+    width: 150px;
+    height: 3px;
+    background: #50ffb1;
+    position: absolute;
+    top: 60% !important;
+    left: 50% !important;
+  }
+  .stroke:after {
+    width: 0% !important;
+    height: 0% !important;
+    -webkit-animation: NoAnimation 0s !important;
+            animation: NoAnimation 0s !important;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   main {
     text-align: center;
     -webkit-box-align: center;
@@ -293,6 +321,37 @@ main .fa:hover {
   .container .my-pic {
     height: 250px;
     width: 250px;
+  }
+  .cover {
+    height: 50vh !important;
+  }
+  main#work .center {
+    width: 120px;
+    top: 45% !important;
+    left: 50%;
+    -webkit-animation: animate-pen-sm 5s linear infinite;
+            animation: animate-pen-sm 5s linear infinite;
+  }
+  .center:before {
+    width: 0;
+    height: 0;
+    background: #50ffb1 !important;
+    -webkit-animation: Noanimation 0s !important;
+            animation: Noanimation 0s !important;
+  }
+  .stroke {
+    width: 150px;
+    height: 3px;
+    background: #50ffb1;
+    position: absolute;
+    top: 60% !important;
+    left: 50% !important;
+  }
+  .stroke:after {
+    width: 0% !important;
+    height: 0% !important;
+    -webkit-animation: NoAnimation 0s !important;
+            animation: NoAnimation 0s !important;
   }
 }
 

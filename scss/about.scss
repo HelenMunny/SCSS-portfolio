@@ -1,6 +1,7 @@
 @import 'utilities';
 @import 'variables';
 @import 'nav';
+@import 'mediaQueries';
 
 * {
   margin: 0;
@@ -178,7 +179,7 @@ footer {
 .scene {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   min-height: 50vh;
   display: flex;
   align-items: center;
@@ -252,6 +253,10 @@ footer {
 
 // projects section
 
+.cover {
+  height: 40vh;
+}
+
 .center {
   width: 175px;
   height: 36px;
@@ -313,12 +318,6 @@ footer {
 }
 
 // pencil stroke
-// #work {
-//   background: red;
-// }
-.cover {
-  height: 25vh;
-}
 
 .stroke {
   width: 200px;
@@ -391,4 +390,21 @@ footer {
   }
 }
 
-@import 'mediaQueries';
+@keyframes animate-pen-sm {
+  0% {
+    left: 35%;
+    transform: rotate(-45deg);
+  }
+  50% {
+    left: 50%;
+    transform: rotate(-45deg);
+  }
+  75% {
+    left: 38%;
+    transform: rotate(135deg);
+  }
+  100% {
+    left: 30%;
+    transform: rotate(135deg);
+  }
+}

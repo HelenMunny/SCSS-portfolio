@@ -48,6 +48,8 @@
     padding-top: 0.5rem !important;
     font-size: 1rem !important;
   }
+
+  @include pencil-animation;
 }
 
 @include tablet {
@@ -112,6 +114,12 @@
       width: 250px;
     }
   }
+
+  .cover {
+    height: 50vh !important;
+  }
+
+  @include pencil-animation;
 }
 
 @include pcXL {

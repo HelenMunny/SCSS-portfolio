@@ -135,6 +135,145 @@
   color: #50ffb1;
 }
 
+@media (max-width: 500px) {
+  main#home h1 {
+    margin-top: 15vh;
+  }
+  main#home .lg-heading {
+    font-size: 3.5rem;
+  }
+  main#home .lg-heading .nickname {
+    font-size: 4rem;
+  }
+  main#work h1 {
+    margin-top: 7vh;
+  }
+  .nav-item {
+    padding-top: 0.5rem !important;
+    font-size: 1rem !important;
+  }
+  main#work .center {
+    width: 120px;
+    top: 45% !important;
+    left: 50%;
+    -webkit-animation: animate-pen-sm 5s linear infinite;
+            animation: animate-pen-sm 5s linear infinite;
+  }
+  .center:before {
+    width: 0;
+    height: 0;
+    background: #50ffb1 !important;
+    -webkit-animation: Noanimation 0s !important;
+            animation: Noanimation 0s !important;
+  }
+  .stroke {
+    width: 150px;
+    height: 3px;
+    background: #50ffb1;
+    position: absolute;
+    top: 60% !important;
+    left: 50% !important;
+  }
+  .stroke:after {
+    width: 0% !important;
+    height: 0% !important;
+    -webkit-animation: NoAnimation 0s !important;
+            animation: NoAnimation 0s !important;
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+  }
+  main .sm-heading {
+    margin-bottom: 1rem !important;
+  }
+  div.nav-image,
+  ul.nav-links {
+    float: none;
+    width: 100%;
+  }
+  div.nav-image {
+    height: 35vh;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  div.nav-image.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  div.nav-image .self-image {
+    background-size: 200px 200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 3px #50ffb1;
+  }
+  ul.nav-links {
+    height: 65vh;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  ul.nav-links.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .container {
+        grid-template-areas: 'my-image' 'bio' 'exp-1' 'exp-2' 'exp-3';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .container .my-pic {
+    height: 250px;
+    width: 250px;
+  }
+  .cover {
+    height: 50vh !important;
+  }
+  main#work .center {
+    width: 120px;
+    top: 45% !important;
+    left: 50%;
+    -webkit-animation: animate-pen-sm 5s linear infinite;
+            animation: animate-pen-sm 5s linear infinite;
+  }
+  .center:before {
+    width: 0;
+    height: 0;
+    background: #50ffb1 !important;
+    -webkit-animation: Noanimation 0s !important;
+            animation: Noanimation 0s !important;
+  }
+  .stroke {
+    width: 150px;
+    height: 3px;
+    background: #50ffb1;
+    position: absolute;
+    top: 60% !important;
+    left: 50% !important;
+  }
+  .stroke:after {
+    width: 0% !important;
+    height: 0% !important;
+    -webkit-animation: NoAnimation 0s !important;
+            animation: NoAnimation 0s !important;
+  }
+}
+
+@media (min-width: 1171px) {
+  .my-pic {
+    height: 250px;
+    width: 220px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -344,7 +483,7 @@ footer {
 .scene {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   min-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,6 +591,10 @@ footer {
   }
 }
 
+.cover {
+  height: 40vh;
+}
+
 .center {
   width: 175px;
   height: 36px;
@@ -516,10 +659,6 @@ footer {
   width: 20px;
   background-color: #56455e;
   border-radius: 0 4px 4px 0;
-}
-
-.cover {
-  height: 25vh;
 }
 
 .stroke {
@@ -638,83 +777,49 @@ footer {
   }
 }
 
-@media (max-width: 500px) {
-  main#home h1 {
-    margin-top: 15vh;
+@-webkit-keyframes animate-pen-sm {
+  0% {
+    left: 35%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
-  main#home .lg-heading {
-    font-size: 3.5rem;
+  50% {
+    left: 50%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
-  main#home .lg-heading .nickname {
-    font-size: 4rem;
+  75% {
+    left: 38%;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
   }
-  main#work h1 {
-    margin-top: 7vh;
-  }
-  .nav-item {
-    padding-top: 0.5rem !important;
-    font-size: 1rem !important;
-  }
-}
-
-@media (max-width: 768px) {
-  main {
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  main .lg-heading {
-    line-height: 1;
-  }
-  main .sm-heading {
-    margin-bottom: 1rem !important;
-  }
-  div.nav-image,
-  ul.nav-links {
-    float: none;
-    width: 100%;
-  }
-  div.nav-image {
-    height: 35vh;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-  div.nav-image.show {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  div.nav-image .self-image {
-    background-size: 200px 200px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: solid 3px #50ffb1;
-  }
-  ul.nav-links {
-    height: 65vh;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-  }
-  ul.nav-links.show {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  .container {
-        grid-template-areas: 'my-image' 'bio' 'exp-1' 'exp-2' 'exp-3';
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .container .my-pic {
-    height: 250px;
-    width: 250px;
+  100% {
+    left: 30%;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
   }
 }
 
-@media (min-width: 1171px) {
-  .my-pic {
-    height: 250px;
-    width: 220px;
+@keyframes animate-pen-sm {
+  0% {
+    left: 35%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  50% {
+    left: 50%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  75% {
+    left: 38%;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    left: 30%;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
   }
 }
 /*# sourceMappingURL=about.css.map */

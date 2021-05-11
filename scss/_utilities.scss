@@ -24,3 +24,32 @@
     opacity: 0.8;
   }
 }
+
+@mixin pencil-animation {
+  main#work .center {
+    width: 120px;
+    top: 45% !important;
+    left: 50%;
+    animation: animate-pen-sm 5s linear infinite;
+  }
+
+  .center:before {
+    width: 0;
+    height: 0;
+    background: $secondary-clr !important;
+    animation: Noanimation 0s !important;
+  }
+  .stroke {
+    width: 150px;
+    height: 3px;
+    background: $secondary-clr;
+    position: absolute;
+    top: 60% !important;
+    left: 50% !important;
+  }
+  .stroke:after {
+    width: 0% !important;
+    height: 0% !important;
+    animation: NoAnimation 0s !important;
+  }
+}
