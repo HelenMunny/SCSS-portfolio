@@ -184,17 +184,18 @@ footer {
   align-items: center;
   justify-content: center;
 
+  i {
+    position: absolute;
+    top: -250px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animateStars linear infinite;
+    z-index: -4;
+  }
+
   .rocket {
     position: relative;
     animation: rocket 0.2s ease infinite;
   }
-}
-
-.scene i {
-  position: absolute;
-  top: -250px;
-  background: rgba(255, 255, 255, 0.5);
-  animation: animateStars linear infinite;
 }
 
 .rocket::before {

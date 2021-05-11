@@ -357,18 +357,19 @@ footer {
           justify-content: center;
 }
 
-.scene .rocket {
-  position: relative;
-  -webkit-animation: rocket 0.2s ease infinite;
-          animation: rocket 0.2s ease infinite;
-}
-
 .scene i {
   position: absolute;
   top: -250px;
   background: rgba(255, 255, 255, 0.5);
   -webkit-animation: animateStars linear infinite;
           animation: animateStars linear infinite;
+  z-index: -4;
+}
+
+.scene .rocket {
+  position: relative;
+  -webkit-animation: rocket 0.2s ease infinite;
+          animation: rocket 0.2s ease infinite;
 }
 
 .rocket::before {
