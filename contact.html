@@ -41,7 +41,7 @@
   </nav>
  </header>
 
- <main id="home">
+ <main id="work">
  <h1 class="lg-heading">
   Let's Queue Up a <span class="chat">Chat</span>
  </h1>
@@ -49,6 +49,15 @@
   Reach me anytime ......
  </h3>
 
+<!-- rocket animation -->
+ <div class="scene">
+  <div class="rocket">
+   <img src="images/rocket.png" alt="rocket" class="rocket-img">
+  </div>
+ </div>
+
+
+<!-- cotact info -->
  <div class="contact-container">
   <div class="email box">
    <h4 class="contact-text"><span class="contact-medium">Email: </span> mahmudahelen.munny@gmail.com</h4>
@@ -65,10 +74,31 @@
  </div>
  </main>
 
- <footer>
-  <h5 class="footer-text">Mahmuda Helen Munny <br> mahmudahelen.munny@gmail.com <br> 2021</h5>
- </footer>
+ <script>
+  function stars (){
+ let count = 20;
+ let scene = document.querySelector('.scene');
+ let i =0;
+ while(i < count){
+  let star = document.createElement('i');
+  let x = Math.floor(Math.random() * window.innerWidth);
 
- <script src="js/app.js"></script>
+  let duration = Math.random() * 1;
+  let h = Math.random() * 100;
+
+  star.style.left = x + 'px';
+  star.style.width = 1 + 'px';
+  star.style.height = 200 + h + 'px';
+  star.style.animationDuration = duration + 's';
+
+  scene.appendChild(star);
+  i++
+ }
+}
+
+starts();
+ </script>
+
+ <!-- <script src="js/app.js"></script> -->
 </body>
 </html>

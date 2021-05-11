@@ -29,3 +29,8 @@ function toggleMenu() {
   navExpand = false;
  }
 }
+
+
+
+// contact: rocket and star animation
+

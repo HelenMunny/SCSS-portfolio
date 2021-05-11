@@ -60,7 +60,7 @@ main {
   width: 90vw;
   min-height: calc(100vh - 60px);
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 3rem 0;
   overflow: hidden;
 
   .exp-heading {
@@ -136,12 +136,10 @@ footer {
 // contact section......................
 
 .contact-container {
-  min-height: 45vh;
   display: flex;
-  padding: 5rem 0;
+  padding: 3rem 0;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 
   .box {
     border: 4px solid $text-color;
@@ -167,6 +165,87 @@ footer {
       font-style: italic;
       font-weight: bold;
     }
+  }
+}
+
+// contact- rocket animation part
+
+.rocket-img {
+  transform: rotate(-43deg);
+  height: 150px;
+}
+
+.scene {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .rocket {
+    position: relative;
+    animation: rocket 0.2s ease infinite;
+  }
+}
+
+.scene i {
+  position: absolute;
+  top: -250px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: animateStars linear infinite;
+}
+
+.rocket::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 13px;
+  height: 100px;
+  background: linear-gradient(
+    $secondary-clr,
+    rgba(153, 205, 50, 0.368),
+    transparent
+  );
+}
+
+.rocket::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 13px;
+  height: 100px;
+  background: linear-gradient(
+    $secondary-clr,
+    rgba(153, 205, 50, 0.368),
+    transparent
+  );
+  filter: blur(20px);
+}
+
+@keyframes rocket {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes animateStars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200vh);
   }
 }
 
@@ -310,80 +389,5 @@ footer {
     transform: rotate(135deg);
   }
 }
-
-// // projects numbers
-// body#projects {
-//   overflow: hidden;
-// }
-
-// .container-items {
-//   position: absolute;
-//   bottom: 0;
-//   width: 80vw;
-//   height: 400px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   cursor: pointer;
-// }
-
-// .item {
-//   position: relative;
-//   // flex-grow: 1;
-//   font-family: Verdana, Geneva, Tahoma, sans-serif;
-//   font-size: 200px;
-//   transition: all 300ms ease-in-out;
-// }
-// .item:hover {
-//   flex-grow: 1;
-//   font-size: 300px;
-// }
-
-// // h3 {
-// //   position: absolute;
-// //   top: 50%;
-// //   left: 50%;
-// //   transform: translate(-50%, -50%);
-// // }
-
-// img {
-//   width: 100%;
-// }
-
-// .container-img-wrap {
-//   position: absolute;
-//   top: -60rem;
-//   left: -80px;
-//   width: 400px;
-//   height: 500px;
-//   overflow: hidden;
-//   pointer-events: none;
-//   visibility: hidden;
-// }
-
-// .container-img {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-size: cover;
-// }
-
-// @media (max-width: 900px) {
-//   .container-items {
-//     height: 100px;
-//   }
-//   .item {
-//     font-size: 20px;
-//   }
-//   .item:hover {
-//     flex-grow: 1;
-//     font-size: 20px;
-//   }
-//   .container-img-wrap {
-//     display: none;
-//   }
-// }
 
 @import 'mediaQueries';
