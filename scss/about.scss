@@ -426,13 +426,15 @@ footer {
       border-radius: 10px;
     }
 
-    .preview {
+    a.white-bg {
+      display: block;
       padding: 3px;
       background: lighten($text-color, 20%);
       color: $primary-clr;
       font-weight: bold;
     }
-    .github {
+    a.black-bg {
+      display: block;
       padding: 3px;
       background: darken($primary-clr, 30%);
       color: $text-color;

@@ -852,14 +852,16 @@ footer {
   border-radius: 10px;
 }
 
-.projects-container .project-item .preview {
+.projects-container .project-item a.white-bg {
+  display: block;
   padding: 3px;
   background: white;
   color: #201a23;
   font-weight: bold;
 }
 
-.projects-container .project-item .github {
+.projects-container .project-item a.black-bg {
+  display: block;
   padding: 3px;
   background: black;
   color: #faeaea;
