@@ -251,10 +251,11 @@ footer {
   }
 }
 
-// projects section
+// projects section...........................................
 
+// project section pencil animation and basic setup
 .cover {
-  height: 40vh;
+  height: 35vh;
 }
 
 .center {
@@ -406,5 +407,40 @@ footer {
   100% {
     left: 30%;
     transform: rotate(135deg);
+  }
+}
+
+// project section --- showcasing the work
+.projects-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .project-item {
+    // background: white;
+
+    img {
+      width: 100%;
+      height: 250px;
+      border: 2px solid $text-color;
+      border-radius: 10px;
+    }
+
+    .preview {
+      padding: 3px;
+      background: lighten($text-color, 20%);
+      color: $primary-clr;
+      font-weight: bold;
+    }
+    .github {
+      padding: 3px;
+      background: darken($primary-clr, 30%);
+      color: $text-color;
+      font-weight: bold;
+      margin-top: 3px;
+    }
+    .fa {
+      font-size: font-size(link-font);
+    }
   }
 }

@@ -50,6 +50,14 @@
   }
 
   @include pencil-animation;
+
+  main#work .projects-container {
+    grid-template-columns: 1fr !important;
+
+    .fa {
+      font-size: font-size(link-font-sm);
+    }
+  }
 }
 
 @include tablet {
@@ -120,6 +128,12 @@
   }
 
   @include pencil-animation;
+}
+
+@media (max-width: 900px) {
+  main#work .projects-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @include pcXL {
