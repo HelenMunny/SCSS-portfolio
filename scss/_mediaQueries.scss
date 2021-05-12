@@ -49,6 +49,7 @@
     font-size: 1rem !important;
   }
 
+  // pencil animation-project page
   @include pencil-animation;
 
   main#work .projects-container {
@@ -108,7 +109,7 @@
     }
   }
 
-  .container {
+  main#home .container {
     grid-template-areas:
       'my-image'
       'bio'
